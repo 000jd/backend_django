@@ -24,13 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-$0n&v7#)iy*#@_)#2__37^@^4aku0m8&97p7*me0*v4(sa0&e0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
-DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+DEBUG = False
 
-ALLOWED_HOSTS = ["backenddjango-production.up.railway.app", ]
+ALLOWED_HOSTS = ["backenddjango-production.up.railway.app", "https://backenddjango-production.up.railway.app" ]
 
-CSRF_TRUSTED_ORIGINS = ['https://backenddjango-production.up.railway.ap',
-                        'https://www.backenddjango-production.up.railway.ap']
+CSRF_TRUSTED_ORIGINS = ['https://backenddjango-production.up.railway.app',
+                        'https://www.backenddjango-production.up.railway.app']
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
